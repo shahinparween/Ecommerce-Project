@@ -1,0 +1,61 @@
+/* Common Styles */
+h1 {
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product {
+    text-align: center;
+    margin: 20px;
+}
+
+.product img {
+    width: 300px;
+    height: 300px;
+}
+
+.product button {
+    margin-top: 10px;
+}
+
+/* PDP Specific Styles */
+.product-details {
+    max-width: 1000px;
+    text-align: left;
+}
+.product-details img {
+    width: 400px;
+    height: 400px;
+}
+.primary-button {
+  background-color: #265df2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #265df2;
+}
+
+.search-box {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  float:right;
+  width: 300px;
+  outline: none;
+  margin-left:630px;
+}

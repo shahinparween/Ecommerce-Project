@@ -1,0 +1,31 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color:  #4070f4;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+  cursor:pointer;
+}

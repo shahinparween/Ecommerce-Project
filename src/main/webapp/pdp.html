@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Detail Page</title>
+    <link rel="stylesheet" type="text/css" href="css/plppdp.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
+<style>
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h3 {
+  margin-right: 10px;
+}
+.product-details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.button-container{
+  display: flex;
+  flex-direction: column;
+}
+h4 {  
+  margin: 10 auto;
+  padding: 3px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+</style>
+</head>
+<body>
+<div class="header-content">
+	<img src="images/smart-watch.png" alt="Smart Watches" width="300" height="150">
+	<h4 id="welcomeMsg"></h4>
+</div>
+<nav>
+  <ul>
+    <li><a onclick="gotoCategory('men')">Men</a></li>
+    <li><a onclick="gotoCategory('women')">Women</a></li>
+    <li><a onclick="gotoCategory('kids')">kids</a></li>
+    <li><input class="search-box"  type="text" value="Search any watches"/></li>
+  </ul>
+</nav>
+    <div class="product-details">
+    	<div>
+        	<img id="product-image">
+        </div>
+        <div>
+        	<h3 id="product-name"></h3>
+        	<span id="productId"></span>
+        	<h2 style="color:green;" id="product-price"></h2><br>
+        	<p id="product-description"></p><br/><br/>
+        	<ul> <b>Specifications :</b>
+        		<li>Item Shape: Round Bezel Function: No Bezel Available</li>
+				<li>Case Material Type: Alloy Steel</li>
+				<li>Warranty Type: Manufacturer</li>
+				<li>Dial Window Material Type: Glass</li>
+				<li>Watch Movement Type: Quartz; Band Material Type: Stainless Steel</li>
+        	</ul>
+        </div>
+        <div class="button-container">
+        	<button class="primary-button" onclick="addItem()">Add to Cart</button><br/>
+    		<button class="primary-button" onclick="goToCart()">Go To Cart</button>
+        </div>
+        <input type="hidden" id="productImage"/>
+    </div>
+    <script src="js/pdp.js"></script>
+</body>
+</html>

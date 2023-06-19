@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Product Listing Page</title>
+    <script src="js/plp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/plppdp.css">
+    <link rel="stylesheet" href="css/nav.css">
+</head>
+<style>
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h4 {
+  margin-right: 10px;
+}
+h4 {  
+  margin: 0 auto;
+  padding: 3px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+</style>
+<body>
+<div class="header-content">
+	<img src="images/smart-watch.png" alt="Smart Watches" width="300" height="150">
+	<h4 id="welcomeMsg"></h4>
+</div>
+<nav>
+  <ul>
+    <li><a onclick="gotoCategory('men')">Men</a></li>
+    <li><a onclick="gotoCategory('women')">Women</a></li>
+    <li><a onclick="gotoCategory('kids')">kids</a></li>
+    <li><input class="search-box"  type="text" placeholder="Search any watches"/></li>
+  </ul>
+</nav>
+<img src="images/home.jpg" width="100%" height="100%">
+</body>
+</html>

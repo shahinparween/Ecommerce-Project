@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Product Listing Page</title>
+    <script src="js/plp.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/plppdp.css">
+    <link rel="stylesheet" href="css/nav.css">
+    
+<style>
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h3 {
+  margin-right: 10px;
+}
+.product-listing-grid,.product-list{
+  display: flex;
+  flex-direction: row;
+}
+.filter-grid{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin :0 auto;
+}
+
+.vertical-line {
+  width: 2px;
+  height: auto;
+  background-color: blue;
+  display: inline-block;
+  margin :0;
+}
+.product-list{
+	flex-wrap: wrap;
+}
+input[type=checkbox]{
+  cursor:pointer;
+}
+h4 {  
+  margin: 10 auto;
+  padding: 3px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+</style>
+</head>
+<body>
+<div class="header-content">
+	<img src="images/smart-watch.png" alt="Smart Watches" width="300" height="150">
+	<h4 id="welcomeMsg"></h4>
+</div>
+<nav>
+  <ul>
+    <li><a onclick="gotoCategory('men')">Men</a></li>
+    <li><a onclick="gotoCategory('women')">Women</a></li>
+    <li><a onclick="gotoCategory('kids')">kids</a></li>
+    <li><input class="search-box" type="text" placeholder="Search any watches"/></li>
+  </ul>
+</nav>
+
+    <!-- <h1>Product Listing</h1> -->
+
+  <div class="product-listing-grid">  
+    <div class="filter-grid" id="filter-grid">
+    	<br/> <br/>
+    	<span><h4>Filter By Price :</h4></span>
+    	<span><input type="checkbox" onclick="filterPrice(0,499)"> $0 - $499</span>
+    	<span><input type="checkbox" onclick="filterPrice(500,999)"> $500 - $999</span>
+    	<span><input type="checkbox" onclick="filterPrice(1000,1999)"> $1000 - $1999</span>
+    	<span><input type="checkbox" onclick="filterPrice(2000,10000)"> $2000 - Max</span>
+    	<br/> <br/>
+    	<span><h4>Filter By Color :</h4></span>
+    	<span><input type="checkbox"> Black</span>
+    	<span><input type="checkbox"> Red</span>
+    	<span><input type="checkbox"> Pink</span>
+    	<span><input type="checkbox"> Green</span>
+    	<span><input type="checkbox"> Blue</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="product-list" id ="product-list"></div>
+  </div>
+</body>
+</html>

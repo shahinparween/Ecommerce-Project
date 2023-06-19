@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart Page</title>
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<style>
+.cart {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cart-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.primary-button {
+  background-color: #265df2;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #265df2;
+}
+
+.search-box {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  align-items:right;
+  width: 300px;
+  outline: none;
+  margin-left:630px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h4 {
+  margin-right: 10px;
+}
+.coupon-grid {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+h4 {  
+  margin: 10 auto;
+  padding: 3px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+}
+
+</style>
+</head>
+<body>
+<div class="header-content">
+	<img src="images/smart-watch.png" alt="Smart Watches" width="300" height="150">
+	<h4 id="welcomeMsg"></h4>
+</div>
+<nav>
+  <ul>
+    <li><a onclick="gotoCategory('men')">Men</a></li>
+    <li><a onclick="gotoCategory('women')">Women</a></li>
+    <li><a onclick="gotoCategory('kids')">kids</a></li>
+    <li><input class="search-box"  type="text" placeholder="Search any watches"/></li>
+  </ul>
+</nav>
+	<br/>
+		<h2 style="text-align:center;color:blue;">My Shopping Cart</h2>
+	<br/>
+	<div id="cart" class="cart">
+		
+		<div id="cart-items" class="product-list-item">
+			
+		</div>
+		<div class="coupon-grid">
+			<p id="product-price"></p>
+			<p id="discount-price"></p>
+			<p id="delivery-charges"></p>
+			<h3 id="total-price"></h3>
+		</div>
+	</div>
+	<center><input type="button" class="primary-button" value="Go To Checkout" onclick="goToCheckout()"></center>
+	<script src="js/cart.js"></script>
+</body>
+</html>
